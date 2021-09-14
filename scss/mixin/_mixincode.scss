@@ -1,0 +1,19 @@
+@mixin hover($color) {
+  color: $color;
+  cursor: $mousecursor;
+}
+
+@mixin container($bgcolor) {
+  width: 40% + 40%;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: $bgcolor;
+  display: grid;
+  place-items: center;
+}
+
+@mixin container_wrapper {
+  background-color: rgb(12, 11, 11);
+  padding: 10px;
+  position: relative;
+}

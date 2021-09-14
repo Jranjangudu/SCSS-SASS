@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  width: 80%;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: gray;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width: 700px) {
+  header {
+    width: 100%;
+  }
+}
+
+header .wrapper {
+  background-color: #0c0b0b;
+  padding: 10px;
+  position: relative;
+}
+
+header .wrapper h1 {
+  color: white;
+}
+
+header .wrapper h1:hover {
+  color: red;
+  cursor: pointer;
+}
+
+header .wrapper h1::after {
+  content: " ";
+  width: 100%;
+  position: absolute;
+  height: 5px;
+  background-color: red;
+  right: 0px;
+  bottom: 0px;
+}
+
+header .wrapper p {
+  color: white;
+}
+
+header .wrapper p:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: red;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width: 700px) {
+  section {
+    width: 100%;
+  }
+}
+
+section .section_wrapper {
+  background-color: #0c0b0b;
+  padding: 10px;
+  position: relative;
+}
+
+section .section_wrapper h2 {
+  color: white;
+}
+
+section .section_wrapper h2:hover {
+  color: pink;
+  cursor: pointer;
+}
+
+section .section_wrapper h2::after {
+  content: " ";
+  width: 100%;
+  position: absolute;
+  height: 5px;
+  background-color: blue;
+  right: 0px;
+  bottom: 0px;
+}
+
+section .section_wrapper em {
+  color: white;
+}
+
+section .section_wrapper em:hover {
+  color: red;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

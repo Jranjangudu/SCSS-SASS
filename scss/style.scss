@@ -1,0 +1,74 @@
+@import "mixin/mixincode";
+@import "mixin/layout";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$textcolor: white;
+$mousecursor: pointer;
+
+@mixin pseudo_after($bgcolor) {
+  content: " ";
+  width: 120% - 20%;
+  position: absolute;
+  height: 5px;
+  background-color: $bgcolor;
+  right: 0px;
+  bottom: 0px;
+}
+
+header {
+  @include container(gray);
+  //layout
+  @include layout(700) {
+    width: 100%;
+  }
+  .wrapper {
+    @include container_wrapper;
+    h1 {
+      color: $textcolor;
+
+      &:hover {
+        @include hover(red);
+      }
+      &::after {
+        @include pseudo_after(red);
+      }
+    }
+    p {
+      color: $textcolor;
+      &:hover {
+        @include hover(yellow);
+      }
+    }
+  }
+}
+
+section {
+  @include container(red);
+  //layout
+  @include layout(700) {
+    width: 100%;
+  }
+  .section_wrapper {
+    @include container_wrapper;
+    h2 {
+      color: $textcolor;
+      &:hover {
+        @include hover(pink);
+      }
+      &::after {
+        @include pseudo_after(blue);
+      }
+    }
+    em {
+      color: $textcolor;
+      &:hover {
+        @include hover(red);
+      }
+    }
+  }
+}

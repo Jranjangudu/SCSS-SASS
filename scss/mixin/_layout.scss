@@ -1,0 +1,7 @@
+//media Quary
+
+@mixin layout($value) {
+  @media (max-width :#{$value}px) {
+    @content;
+  }
+}
